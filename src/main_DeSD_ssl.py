@@ -31,6 +31,10 @@ import models.res3d as res3d
 from models.res3d import DINOHead
 from data_loader_ssl import Dataset3D
 import shutil
+from loggers import create_python_logger
+
+pylogger = create_python_logger(__name__)
+
 
 torchvision_archs = sorted(
     name
