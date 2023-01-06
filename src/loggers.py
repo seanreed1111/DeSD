@@ -7,6 +7,9 @@ def create_python_logger(name=None, level=logging.DEBUG):
     pylogger.setLevel(level)
     console_handler = logging.StreamHandler()
     file_handler = logging.FileHandler(f"logs/{name}.log")
+    (Path.cwd() / "logs").mkdir(
+        parents=True, exist_ok=True
+    )  # writes to "./logs" so make sure dir exists
     formatter = logging.Formatter(
         "%(asctime)s : %(levelname)s : %(name)s : %(message)s"
     )
