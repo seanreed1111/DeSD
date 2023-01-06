@@ -1,5 +1,5 @@
 #!/bin/bash
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5 python -m torch.distributed.launch --nproc_per_node=6 main_DeSD_ssl.py \
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=1 main_DeSD_ssl.py \
  --arch='res3d50' \
  --data_path='/media/new_userdisk0/data_SSL/' \
  --list_path='SSL_data_deeplesion.txt' \
