@@ -8,6 +8,6 @@ compute_target_args:
   machine_name: Telsa V100
   process_count_per_instance: 1
 experiment_name: DeSD
-environment: Pytorch-1_7:4
+environment: Pytorch-1_7:6
 batch_size: 1
 tier: LowPriority
