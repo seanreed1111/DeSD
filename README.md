@@ -72,7 +72,7 @@ class ResNet50_Decoder(nn.Module):
 
     def forward(self, input):
         outs = self.encoder(input)
-        decoder_out = self.deocder(outs)
+        decoder_out = self.decoder(outs)
         out = self.seg_head(decoder_out)
         return out
 ```
